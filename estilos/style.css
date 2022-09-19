@@ -1,0 +1,39 @@
+@charset "UTF-8"
+
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi+Fun:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+
+/* CABEÇALHO */
+
+header {
+    font-family: 'Rajdhani', sans-serif;
+    background-color: black;
+    height: 4%;
+    position: fixed;
+}
+
+nav, a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
+/* MAIN */
+
+main {
+    font-family: 'Reem Kufi Fun', sans-serif;    
+}
+
