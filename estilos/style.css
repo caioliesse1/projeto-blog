@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Reem+Kufi+Fun:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
 
-/*--Cores: preto #11111f/ #ffffff branco / #e7e7e9 branco+ / #b8b8bc cinza claro / #707079 cinza escuro--*/
+/*--Cores: preto #11111f/ #ffffff branco / #e7e7e9 branco+ / #b8b8bc cinza claro / #707079 cinza escuro /255, 208, 120, 0.815 laranja --*/
  
 * {
     padding: 0;
@@ -24,18 +24,51 @@ header {
     height: 8%;
     position: fixed;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+li {
+    list-style: none;
+}
+
+li, a {
+    text-decoration: none;
+    color: white;
+    font-weight: 550;
+    font-size: larger;
 }
 
 #logo {
-    height: 8vh;
-    padding-left: 10%;
+    height: 100%;
+    padding-left: 90%;
 }
 
-.buttons1 {
-    text-decoration: none;
+button {
+    background-color: transparent;
+    border: none;
     color: white;
+    font-size: 36px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: none;
+}
+
+nav, ul {
+    display: flex;
+    gap: 30%;
+    align-items: center;
+    padding-right: 20%;
     
 }
+
+li:hover, a:hover, button:hover{
+    cursor: pointer;
+    color: rgba(255, 208, 120, 0.815);
+}
+
 
 
 
@@ -46,3 +79,22 @@ main {
     font-family: 'Reem Kufi Fun', sans-serif;    
 }
 
+
+
+
+@media (max-width: 700px) {
+    nav, ul {
+        flex-direction: column;
+    }
+    ul {
+        text-align: center;
+    }
+    #logo {
+        padding: 0;
+        width: 80%;
+    }
+    header {
+        align-items: center;
+    }
+
+}
