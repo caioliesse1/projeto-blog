@@ -58,7 +58,7 @@ ul {
     background-color: transparent;
     border: none;
     color: white;
-    font-size: 36px;
+    font-size: 50px;
     position: absolute;
     right: 10px;
     top: 10px;
@@ -147,6 +147,7 @@ button:hover {
         align-items: flex-start;
         padding: 0;
         background-color: #323235;
+        width: 100%;
     }
     li, ul {
         padding: 13px;
@@ -159,9 +160,14 @@ button:hover {
     }
     #navBar {
         display: flex;
-        padding-top: 10px;
     }
     #logo {
         padding-top: 10px;
+    }
+
+    /*-- MAIN -- */
+
+    body {
+        background-color: #3D425C;
     }
 }
