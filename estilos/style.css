@@ -4,48 +4,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
 
 /*--Cores: preto #11111f/ #ffffff branco / #e7e7e9 branco+ / #b8b8bc cinza claro / #707079 cinza escuro /255, 208, 120, 0.815 laranja --*/
- 
-* {
-    padding: 0;
-    margin: 0;
-}
+
+/*--  font-family: 'Reem Kufi Fun'; / font-family: 'Rajdhani'; --*/
 
 body {
-    background-color: black;
-    color: white;
-}
-
-
-/* CABEÇALHO */
-
-header {
-    font-family: 'Rajdhani', sans-serif;
-    background-color: #343440;
-    height: 8%;
-    position: fixed;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #151515, #1d1125, #3C415C, #B4A5A5);
+    background-size: 250% 300%;
+    animation: colors 15s ease infinite;
     
 }
 
-li {
-    list-style: none;
-}
+/*--CABEÇALHO--*/
 
-li, a {
-    text-decoration: none;
-    color: white;
-    font-weight: 550;
-    font-size: larger;
+nav {
+    justify-content: space-between;
+   background-color: transparent;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    
 }
 
 #logo {
-    height: 100%;
-    padding-left: 90%;
+    width: 200px;
 }
 
-button {
+li,
+a {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    padding: 0 20px;
+    font-family: 'Rajdhani';
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
+ul {
+    overflow: hidden;
+    transition: all .5s;
+}
+
+nav,
+ul {
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+}
+
+#navBar {
     background-color: transparent;
     border: none;
     color: white;
@@ -56,45 +65,103 @@ button {
     display: none;
 }
 
-nav, ul {
-    display: flex;
-    gap: 30%;
-    align-items: center;
-    padding-right: 20%;
+li:hover,
+#logo:hover,
+button:hover {
+    cursor: pointer;
+    opacity: 0.8;
     
 }
 
-li:hover, a:hover, button:hover{
-    cursor: pointer;
-    color: rgba(255, 208, 120, 0.815);
+#navBar:focus ~ ul {
+    height: 220px;
+}
+
+/*-- Main --*/
+
+@keyframes colors {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#design {
+    margin: 0;
+    font-family: 'Rajdhani';
+    color: rgb(240, 233, 237);
+    font-size: 7em;
+    font-weight: 550;
+    
+}
+
+#design2 {
+    color: rgb(214, 208, 208);
+    font-family: 'Rajdhani';
+    
+}
+
+#section1 {
+    text-align: center;
+    padding: 18%;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.493);
+    line-height: 0.92;
+}
+
+#inovação {
+    padding-left: 11%;
+}
+
+.button-learn {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    padding-top: 18%;
+}
+
+.button-bot {
+   width: 500px;
+   border-top: 0.4px  solid white;
+   padding-top: 30px;
 }
 
 
 
 
+@media (max-width:700px) {
+    
+    /*--CABEÇALHO--*/
 
-/* MAIN */
-
-main {
-    font-family: 'Reem Kufi Fun', sans-serif;    
-}
-
-
-
-
-@media (max-width: 700px) {
-    nav, ul {
+    nav,ul {
         flex-direction: column;
+    }
+    nav {
+        align-items: flex-start;
+        padding: 0;
+        background-color: #323235;
+    }
+    li, ul {
+        padding: 13px;
+        width: 100%;
     }
     ul {
         text-align: center;
+        margin: 0;
+        height: 0;
+    }
+    #navBar {
+        display: flex;
+        padding-top: 10px;
     }
     #logo {
-        padding: 0;
-        width: 80%;
+        padding-top: 10px;
     }
-    header {
-        align-items: center;
-    }
-
 }
